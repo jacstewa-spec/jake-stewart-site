@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eCommerce SEO Infrastructure Overhaul — Jake Stewart</title>
+  <meta name="description" content="How Jake Stewart rebuilt a large eCommerce retailer's SEO infrastructure at scale — consolidating 200,000+ indexed pages, implementing automated URL lifecycle management, and returning organic revenue to $200K+ monthly." />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">Jake <em>Stewart</em></a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../skills.html" class="hide-mobile">Expertise</a></li>
+        <li><a href="index.html">Case Studies</a></li>
+        <li><a href="../assets/jake-stewart-resume.pdf" target="_blank" class="nav-resume">Resume ↓</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="cs-detail-hero">
+    <div class="container">
+      <a href="index.html" class="cs-back">&larr; All Case Studies</a>
+      <span class="section-label">Case Study 02 &nbsp;·&nbsp; SEO Infrastructure &amp; Cross-Functional Execution</span>
+      <h1>Rebuilding eCommerce SEO<br>Infrastructure at Scale</h1>
+      <div class="cs-detail-meta">
+        <div class="cs-detail-meta-item">
+          <div class="cs-meta-label">Company</div>
+          <div class="cs-meta-value">A Multi-Brand eCommerce Retailer</div>
+        </div>
+        <div class="cs-detail-meta-item">
+          <div class="cs-meta-label">Role</div>
+          <div class="cs-meta-value">SEO Manager</div>
+        </div>
+        <div class="cs-detail-meta-item">
+          <div class="cs-meta-label">Timeline</div>
+          <div class="cs-meta-value">Nov 2021 – May 2023</div>
+        </div>
+        <div class="cs-detail-meta-item">
+          <div class="cs-meta-label">Primary Impact</div>
+          <div class="cs-meta-value">$200K+ Monthly Organic Revenue</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BODY ============ -->
+  <section class="cs-detail-body">
+    <div class="container">
+      <div class="cs-detail-grid">
+
+        <!-- Main content -->
+        <div>
+
+          <div class="cs-detail-section fade-up">
+            <h3>The Situation</h3>
+            <p>
+              When I joined this large eCommerce retailer as SEO Manager, I inherited a site that was losing ground in search at an accelerating rate — and the causes ran far deeper than content or keywords. The business had spent over 15 years building on a heavily customized, outdated technology stack: an ERP, inventory management system, and website infrastructure that had been patched and workaround-engineered rather than modernized.
+            </p>
+            <p>
+              The downstream SEO consequences were severe. The system generated individual product URLs for every possible product variation — length, color, size, grip style — across a catalog of roughly 40,000 active products. Meanwhile, leadership was reluctant to deprecate any product from the database, fearing future inventory shipments on dormant SKUs. The result: a database of approximately 400,000 products, over 200,000 indexed pages, and a site architecture that was fundamentally broken from a search engine perspective.
+            </p>
+            <p>
+              The problems extended well beyond SEO. The pricing team couldn't enforce Minimum Advertised Price (MAP) requirements consistently across proliferating URLs. The sales team lacked clear inventory visibility. And consumers searching for products couldn't find them in the SERP — or couldn't navigate to the right URL once they arrived — leading them to assume the retailer didn't carry what they were looking for. This was an organizational problem that happened to be most visible in organic search.
+            </p>
+          </div>
+
+          <div class="cs-detail-section fade-up">
+            <h3>The Approach</h3>
+            <p>
+              There was no single technical fix. The infrastructure limitations were real and could not be fully overcome — the goal was to build intelligent systems around them that could operate at scale, automatically, without requiring manual intervention on 40,000 products. That required coordinating across IT, data engineering, UX design, product management, sales leadership, and web development simultaneously.
+            </p>
+            <ul>
+              <li>
+                <strong>Inventory audit and deprecation strategy:</strong> Working with data engineers, I analyzed shipment history across all dormant SKUs to determine the realistic probability of future inventory arriving. We also implemented automated flags for when manufacturers discontinued production. This analysis allowed us to confidently deprecate approximately 70% of the database — eliminating the associated URLs and implementing strategic redirect mapping from deprecated PDPs to appropriate brand and category-level PLPs.
+              </li>
+              <li>
+                <strong>Automated URL lifecycle management:</strong> For the remaining active and semi-active inventory, I worked with IT to build a trigger-based response code system. Products out of stock for 90 days retained a 200 status but displayed an updated message with an in-link to a mapped replacement. After a further 90 days, a 302 redirect to a categorized PLP was implemented automatically. After 18 months, the 302 converted to a permanent 301 — signaling stable, long-term consolidation to search engines without disrupting any residual equity during the transition.
+              </li>
+              <li>
+                <strong>Variant consolidation with toggleable UX:</strong> To eliminate the proliferation of duplicate URLs for product variations, I coordinated with IT and UX specialists to build a toggleable interface allowing users to navigate between product variants — color, size, grip, shaft length — on a single canonical URL. This required a parallel data architecture change: product managers were retrained to tag variants relationally in the inventory system rather than entering them as separate product lines, enabling the front end to pull and display variations automatically.
+              </li>
+              <li>
+                <strong>MAP compliance override system:</strong> Where MAP pricing requirements or model-line complexities prevented full variant consolidation, I worked with product managers to build a manual override that allowed a distinct URL when necessary — supported by the in-link infrastructure we'd built to ensure those URLs were relationally connected to their consolidated counterparts for both users and crawlers.
+              </li>
+              <li>
+                <strong>Inlink infrastructure and related product UX:</strong> To build clear relational pathways between products for crawlers and users alike, I engaged web designers to redesign PDPs with "You May Also Like" and "Often Ordered Together" modules. The underlying data model was restructured to define product relationships by SKU, brand, and type — enabling the front end to generate contextually accurate inlinks automatically at scale.
+              </li>
+              <li>
+                <strong>Sitemap architecture rebuild:</strong> In coordination with IT, we implemented a live sitemap generation system that refreshed every seven days across 13 category-segmented sitemaps aligned to the site's information architecture. Each sitemap included last-modified timestamps to send recency signals to search engine algorithms — a detail that meaningfully impacts how frequently crawlers return to updated content.
+              </li>
+            </ul>
+          </div>
+
+          <div class="cs-detail-section fade-up">
+            <h3>Cross-Functional Dimension</h3>
+            <p>
+              This engagement was executed almost entirely through lateral cross-functional leadership. My direct reports were SEO copywriters — but the infrastructure work required sustained coordination with in-house data engineers, IT leadership and specialists, UX designers, product managers, and sales leadership, alongside an external web development team.
+            </p>
+            <p>
+              Each workstream had its own stakeholder dynamics. IT coordination required translating SEO requirements into technical specifications and building consensus around system changes that had implications beyond marketing. Product managers required process redesign — changing how they entered and tagged inventory data as part of their standard workflow. Sales leadership required buy-in on deprecation decisions that touched their pipeline. Getting all of these functions moving in the same direction, on the same timeline, without direct authority over any of them, was the central leadership challenge of the engagement.
+            </p>
+          </div>
+
+          <div class="cs-detail-section fade-up">
+            <h3>The Outcome</h3>
+            <p>
+              The full system went live in December 2022. Results began climbing immediately and continued to trend upward every month through my departure in May 2023 — with the automated infrastructure still scaling at that point.
+            </p>
+            <ul>
+              <li>Monthly organic traffic recovered from approximately <strong>75,000 visits</strong> at its lowest point to <strong>125,000 visits</strong> by the time of departure — a 67% recovery — with trajectory continuing upward.</li>
+              <li>Monthly organic revenue recovered from a low of <strong>$92,000</strong> to over <strong>$200,000</strong> — more than doubling attributed organic revenue within the program's first five months of full operation.</li>
+              <li>The indexed page count was reduced from over <strong>200,000 pages</strong> to approximately <strong>70,000</strong> — eliminating 130,000 low-value, non-transactional URLs and dramatically improving crawl budget allocation and index quality.</li>
+              <li>Crawl depth improved as a direct result of reduced pagination, surfacing previously buried product and category pages to search engine crawlers.</li>
+              <li>The automated trigger systems, variant consolidation logic, and sitemap regeneration continued to operate and scale without manual intervention after launch.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Sidebar results -->
+        <div class="cs-sidebar">
+          <div class="cs-result-card fade-up">
+            <div class="cs-meta-label">Organic Revenue Recovery</div>
+            <span class="cs-meta-value">$200K+</span>
+            <p class="cs-result-desc">Monthly organic revenue post-implementation, up from a low of $92K — more than doubling attributed organic revenue.</p>
+          </div>
+          <div class="cs-result-card fade-up">
+            <div class="cs-meta-label">Traffic Recovery</div>
+            <span class="cs-meta-value">+67%</span>
+            <p class="cs-result-desc">Monthly organic visits recovered from 75K to 125K, with upward trajectory continuing at departure.</p>
+          </div>
+          <div class="cs-result-card fade-up">
+            <div class="cs-meta-label">URLs Eliminated</div>
+            <span class="cs-meta-value">130K</span>
+            <p class="cs-result-desc">Indexed pages reduced from 200K+ to ~70K, reclaiming crawl budget and eliminating index bloat across 40,000 active products.</p>
+          </div>
+          <div class="cs-result-card fade-up">
+            <div class="cs-meta-label">Implementation Timeline</div>
+            <span class="cs-meta-value">12 Mo.</span>
+            <p class="cs-result-desc">Full system designed, coordinated across six functions, and deployed within one year of joining the organization.</p>
+          </div>
+
+          <div style="margin-top: 24px; padding: 32px; border: 1px solid var(--border);" class="fade-up">
+            <div class="section-label" style="margin-bottom: 12px;">Download Resume</div>
+            <p style="font-size: 0.85rem; margin-bottom: 20px;">See the full scope of experience behind this work.</p>
+            <a href="../assets/jake-stewart-resume.pdf" target="_blank" class="btn-primary" style="width: 100%; justify-content: center;">Download PDF ↓</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BACK TO CASE STUDIES ============ -->
+  <div style="border-top: 1px solid var(--border); padding: 48px 0; background: var(--off-white);">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
+      <a href="case-study-1.html" class="btn-secondary">&larr; Previous Case Study</a>
+      <a href="index.html" class="btn-secondary">All Case Studies &rarr;</a>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-brand">Jake <span>Stewart</span></div>
+          <p class="footer-tagline">Senior marketing leader building cross-functional teams and programs that drive measurable pipeline, retention, and revenue.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../skills.html">Expertise</a></li>
+            <li><a href="index.html">Case Studies</a></li>
+            <li><a href="../assets/jake-stewart-resume.pdf" target="_blank">Resume ↓</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/jacob-stewart-9aa251113/" target="_blank">LinkedIn</a></li>
+            <li><a href="mailto:jake@jake-stewart.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Jake Stewart. All rights reserved.</p>
+        <p>jake-stewart.com</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
