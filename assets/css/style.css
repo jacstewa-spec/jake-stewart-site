@@ -393,13 +393,11 @@ nav {
   font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--text-muted);
+  color: var(--charcoal-soft);
   letter-spacing: 0.04em;
-  opacity: 0.65;
-  transition: opacity 0.2s;
+  opacity: 1;
 }
 
-.brand-item:hover { opacity: 1; }
 
 /* ============ HOMEPAGE SECTIONS ============ */
 .about {
@@ -436,9 +434,9 @@ nav {
 }
 
 .stat-number sup {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   vertical-align: super;
-  color: var(--gold);
+  color: var(--charcoal);
 }
 
 .stat-label {
