@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>eCommerce SEO Infrastructure Overhaul, Jake Stewart</title>
   <meta name="description" content="How Jake Stewart rebuilt a large eCommerce retailer's SEO infrastructure at scale, consolidating 200,000+ indexed pages, implementing automated URL lifecycle management, and returning organic revenue to $200K+ monthly." />
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon-16x16.png">
+  <link rel="manifest" href="../assets/site.webmanifest">
   <link rel="stylesheet" href="../assets/css/style.css" />
 </head>
 <body>
@@ -60,20 +64,20 @@
           <div class="cs-detail-section fade-up">
             <h3>The Situation</h3>
             <p>
-              When I joined this large eCommerce retailer as SEO Manager, I inherited a site that was losing ground in search at an accelerating rate, and the causes ran far deeper than content or keywords. The business had spent over 15 years building on a heavily customized, outdated technology stack: an ERP, inventory management system, and website infrastructure that had been patched and workaround-engineered rather than modernized.
+              When I joined this large eCommerce retailer as SEO Manager, I inherited a site that was losing ground in search at an accelerating rate, and the causes ran far deeper than content or keywords. The business had spent over 15 years building on a heavily customized, outdated technology stack: This included an ERP, inventory management system, and website infrastructure that had been patched and workaround-engineered rather than modernized.
             </p>
             <p>
-              The downstream SEO consequences were severe. The system generated individual product URLs for every possible product variation, length, color, size, grip style, across a catalog of roughly 40,000 active products. Meanwhile, leadership was reluctant to deprecate any product from the database, fearing future inventory shipments on dormant SKUs. The result: a database of approximately 400,000 products, over 200,000 indexed pages, and a site architecture that was fundamentally broken from a search engine perspective.
+              The downstream SEO consequences were severe. The system generated individual product URLs for every possible product variation including sporting equipment variants for length, color, size, grip style, and more across a catalog of roughly 40,000 active products. Meanwhile, leadership was reluctant to deprecate any product from the database, fearing future inventory shipments on dormant SKUs would mean our deprecation would be an obstacle to sales. The result was a database of approximately 400,000 products, over 200,000 indexed pages, and a site architecture that was fundamentally broken from a search engine perspective.
             </p>
             <p>
-              The problems extended well beyond SEO. The pricing team couldn't enforce Minimum Advertised Price (MAP) requirements consistently across proliferating URLs. The sales team lacked clear inventory visibility. And consumers searching for products couldn't find them in the SERP, or couldn't navigate to the right URL once they arrived, leading them to assume the retailer didn't carry what they were looking for. This was an organizational problem that happened to be most visible in organic search.
+              The problems extended well beyond SEO. The pricing team couldn't enforce Minimum Advertised Price (MAP) requirements consistently across proliferating URLs. The sales team lacked clear inventory visibility. And consumers searching for products couldn't find them in search engine results or couldn't navigate to the right URL once they arrived the website, leading them to assume the retailer didn't carry what they were looking for. This was an organizational problem that happened to be most visible in organic search.
             </p>
           </div>
 
           <div class="cs-detail-section fade-up">
             <h3>The Approach</h3>
             <p>
-              There was no single technical fix. The infrastructure limitations were real and could not be fully overcome, the goal was to build intelligent systems around them that could operate at scale, automatically, without requiring manual intervention on 40,000 products. That required coordinating across IT, data engineering, UX design, product management, sales leadership, and web development simultaneously.
+              There was no single technical fix. The infrastructure limitations were real and could not be fully overcome. The goal was to build intelligent systems around them that could operate at scale, automatically, without requiring manual intervention on 40,000 products. That required coordinating across IT, data engineering, UX design, product management, sales leadership, and web development simultaneously.
             </p>
             <ul>
               <li>
@@ -83,13 +87,13 @@
                 <strong>Automated URL lifecycle management:</strong> For the remaining active and semi-active inventory, I worked with IT to build a trigger-based response code system. Products out of stock for 90 days retained a 200 status but displayed an updated message with an in-link to a mapped replacement. After a further 90 days, a 302 redirect to a categorized PLP was implemented automatically. After 18 months, the 302 converted to a permanent 301, signaling stable, long-term consolidation to search engines without disrupting any residual equity during the transition.
               </li>
               <li>
-                <strong>Variant consolidation with toggleable UX:</strong> To eliminate the proliferation of duplicate URLs for product variations, I coordinated with IT and UX specialists to build a toggleable interface allowing users to navigate between product variants, color, size, grip, shaft length, on a single canonical URL. This required a parallel data architecture change: product managers were retrained to tag variants relationally in the inventory system rather than entering them as separate product lines, enabling the front end to pull and display variations automatically.
+                <strong>Variant consolidation with toggleable UX:</strong> To eliminate widespread duplicate URLs for product variations, I coordinated with IT and UX specialists to build a toggleable interface allowing users to navigate between product variants, color, size, grip, shaft length, on a single canonical URL. This required a parallel data architecture change: product managers were re-trained to tag variants relationally in the inventory system rather than entering them as separate product lines, enabling the front end to pull and display variations automatically.
               </li>
               <li>
-                <strong>MAP compliance override system:</strong> Where MAP pricing requirements or model-line complexities prevented full variant consolidation, I worked with product managers to build a manual override that allowed a distinct URL when necessary, supported by the in-link infrastructure we'd built to ensure those URLs were relationally connected to their consolidated counterparts for both users and crawlers.
+                <strong>MAP compliance override system:</strong> Where MAP pricing requirements or model-line complexities prevented full variant consolidation, I worked with product managers to build a manual override that allowed a distinct URL. Simultaneously, I worked to ensure those URLs were supported by an in-link infrastructure that relationally connected them to their consolidated counterparts, ensuring good UX for users and clear inventory signals to crawlers.
               </li>
               <li>
-                <strong>Inlink infrastructure and related product UX:</strong> To build clear relational pathways between products for crawlers and users alike, I engaged web designers to redesign PDPs with "You May Also Like" and "Often Ordered Together" modules. The underlying data model was restructured to define product relationships by SKU, brand, and type, enabling the front end to generate contextually accurate inlinks automatically at scale.
+                <strong>Inlink infrastructure and related product UX:</strong> To build clear relational pathways between products for crawlers and users alike, I engaged web designers to redesign PDPs with "You May Also Like" and "Often Ordered Together" modules. The underlying data model was restructured to define product relationships by SKU, brand, and type, enabling the front end to generate contextually accurate in-links automatically at scale.
               </li>
               <li>
                 <strong>Sitemap architecture rebuild:</strong> In coordination with IT, we implemented a live sitemap generation system that refreshed every seven days across 13 category-segmented sitemaps aligned to the site's information architecture. Each sitemap included last-modified timestamps to send recency signals to search engine algorithms, a detail that meaningfully impacts how frequently crawlers return to updated content.
